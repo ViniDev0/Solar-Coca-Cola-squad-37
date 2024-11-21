@@ -215,13 +215,13 @@ window.addEventListener("DOMContentLoaded", () => {
     if (imagemSalva) {
         botaoImagem.src = imagemSalva; 
     } else {
-        botaoImagem.src = "./imgs/botao-adicionar.png"; 
+        botaoImagem.src = "../imgs/botao-adicionar.png"; 
     }
 });
 
 // Reseta a imagem ao cancelar ou fechar o modal
 const resetImage = () => {
-    botaoImagem.src = "./imgs/botao-adicionar.png"; 
+    botaoImagem.src = "../imgs/botao-adicionar.png"; 
 
     // Limpa o campo de upload
     if (inputUpload) {

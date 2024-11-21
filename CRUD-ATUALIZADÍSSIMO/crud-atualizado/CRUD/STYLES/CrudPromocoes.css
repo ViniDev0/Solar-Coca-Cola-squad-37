@@ -1,12 +1,4 @@
-
-
-body{
-    margin: 0;
-    font-family: sans-serif;
-    background-color: #ff0000;
-    position: fixed;
-}
-
+/* barra de pesquisa */
 .conteinerBuscarClinte h2{
     margin: 0;
     margin-bottom: 15px;
@@ -14,7 +6,6 @@ body{
 
 .conteinerBuscarClinte{
     display: grid;
-    /* border: 1px solid black; */
     margin-left: 20px;
     width: 60vw;
 }
@@ -39,6 +30,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 2fr;
 }
+/* Aside  */
 .sidebar{
     top: 0;
     display: flex;
@@ -127,22 +119,8 @@ body{
 }
 
 /* main */
-main{
-    display: flex;
-    border: 0px solid white; 
-    flex-direction: column;
-    align-items: left;
-    justify-content: center;
-    background-color: #ffffff;
-    height: 100vh;
-    width: 100vw;
-    border-radius: 24px 0px 0px 20px;
-    position: relative;
-    left: -2.0vw;
-    z-index: 1;
-}
 
-/* CRIEI UMA DIV PARA COLOCAR A TABELA NO MEIO */
+
 .conteiner-tabela{
     display: grid;
     position: fixed;
@@ -152,9 +130,9 @@ main{
 
 /* Container da tabela com altura e rolagem */
 .tabela-conteiner {
-    max-height: 300px; /* Define a altura máxima da tabela */
-    overflow-y: auto; /* Adiciona barra de rolagem vertical quando necessário */
-    margin-top: 20px;  /* Ajuste para algum espaçamento se necessário */
+    max-height: 300px; 
+    overflow-y: auto; 
+    margin-top: 20px; 
 }
 
 /* Estilos da barra de rolagem personalizada */
@@ -172,19 +150,7 @@ main{
 }
 /* fim da div TABELA */
 
-/* .cabecalho-crud{
-display: flex;
-background-color: #F21D1D;
-height: 5vh;
-width: 58.8vw;
-color: #ffffff;
-justify-content: space-between;
-align-items: center;
-border-radius: 10px 10px 0px 0px;
-padding: 8px;
-margin-left: 20px;
 
-} */
 .botao-cabecalho{
     display: grid;
     width: 60vw;
@@ -193,9 +159,7 @@ margin-left: 20px;
     margin-top: 100px;
 
 }
-/* .adicionar img{
-    height: 3vh;
-} */
+
 table {
     margin-left: 20px;
     width: 60vw;
@@ -208,7 +172,6 @@ thead{
     border-radius: 5px 5px 0 0; 
     overflow: hidden;
 
-    /* alterei a cor e a espessura da borda  */
 }
 th, td {
     border: 1px solid #e6e5e5;
@@ -259,9 +222,7 @@ tbody{
     border: 1px solid #e6e5e5;  
     border-top: none; 
     scroll-behavior: auto;
-    /* border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px; */
-    /* nao ta arredondando */
+
 }
 thead th, tbody td {
     border: none; 
@@ -280,10 +241,7 @@ tbody td{
 
 /* BOTOES DE EXCLUIR E EDITAR */
 .edit{
-    /* background: rgb(255, 238, 0);
-    border: 0px;
-    padding: 15px;
-    border-radius: 5px; */
+
     cursor: pointer;
     height: 25px;
 }
@@ -292,10 +250,7 @@ tbody td{
 
 }
 .exclude{
-    /* background: rgb(255, 0, 0); */
-    /* border: 0px; */
-    /* padding: 15px; */
-    /* border-radius: 5px; */
+
     cursor: pointer;
     height: 27px;
 
@@ -304,8 +259,6 @@ tbody td{
    opacity: 70%;
 }
 
-/* FIM DOS BOTOES  */
-/* 
 #pesquisa{
     margin-left:px;
 } */
