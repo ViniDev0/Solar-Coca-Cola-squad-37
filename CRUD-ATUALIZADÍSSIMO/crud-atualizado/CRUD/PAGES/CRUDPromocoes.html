@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CrudPreco.css">
-    <title>CRUDPrecos</title>
+    <link rel="stylesheet" href="../STYLES/CrudPromocoes.css">
+    <title>Promoções</title>
 </head>
 <body>
     <div class="container">
@@ -12,8 +12,8 @@
          <div>
             <header class="sidebar-header">
                 <div class="logo-elemento">
-                    <img class="logo-solar" src="./imgs/SOLAR-LOGO.png" alt="">
-                    <img class="line"  src="./imgs/Line 7.png" alt="">
+                    <img class="logo-solar" src="../imgs/SOLAR-LOGO.png" alt="">
+                    <img class="line"  src="../imgs/Line 7.png" alt="">
                 </div>
             </header>
             <nav class="botao-cima">
@@ -33,7 +33,6 @@
                     <span>PREÇOS</span>
                 </button>
             </nav>
-
     </div>
         <div id="cor">
             <div class="nav-baixa">
@@ -51,22 +50,26 @@
         </div>
     </aside>
     <main>
+
+     
+        
+
+
         <div class="conteiner-tabela">
            
             <div class="conteinerBuscarClinte">
-                <h2>Buscar Precificação</h2>
+                <h2>Buscar Promoção</h2>
                  <div class="pesquisa">
-                    <input type="text" id="pesquisa" placeholder="Pesquisar..." button="">
+                    <input type="text" id="pesquisa" placeholder="Pesquisar...">
                 </div>
             </div>
          <div class="tabela-conteiner">
                 <table id="tableClient">
                     <thead>
                         <tr>
-                            <th>Produto</th>
-                            <th>Canal</th>
+                            <th>Nome Cliente</th>
                             <th>Região</th>
-                            <th>Tipo Cliente</th>
+                            <th>Nível</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
@@ -86,14 +89,16 @@
         </table>        
                 
             </div>
+
+        
+        
     </div>
     <div class="botao-cabecalho">     
-        <button class="open-modal"> <img src="./imgs/adicionar.png" alt=""><span> Adicionar Preço</span></button>
+        <button class="open-modal"> <img src="../imgs/adicionar.png" alt=""><span> Adicionar Promoção</span></button>
     </div>
    
-
     <button id="button-imprimir">imprimir</button>
-
+        
 
 
         
@@ -101,18 +106,13 @@
         <div id="fade" class="hide"></div>
         <div id="modal" class="hide">
             <div class="modal-header">
-                <img  id="logo-cliente" src="./imgs/Cliente-Solar.png" alt="">
-                <button id="close-modal"> <img src="./imgs/excluir.png" alt=""></button>
+                <img  id="logo-cliente" src="../imgs/Cliente-Solar.png" alt="">
+                <button id="close-modal"> <img src="../imgs/excluir.png" alt=""></button>
             </div>
             <div class="modal-body">
                 <form id="form" class="modal-form">
-                    <input type="text" id="produto" data-index="new" class="modal-field" placeholder="Produto"required>
-                    <select id="Canal" class="modal-field" required>
-                        <option value="" disabled selected>Canal</option>
-                        <option value="Vendedor">Vendedor</option>
-                        <option value="Web">Web</option>
-                        <option value="Mobile">Mobile</option>
-                    </select>
+                    <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome do Cliente"required>
+                    <!-- <input type="text" id="regiao" class="modal-field" placeholder="Região" required> -->
                     <select id="regiao" class="modal-field" required>
                         <option value="" disabled selected>Selecione a Região</option>
                         <option value="AC">AC</option>
@@ -149,6 +149,6 @@
         </div>
     </main>
 </div>
-<script src="./scriptPrecos.js"></script>
+<script src="../SCRIPTS/scriptPromocoes.js"></script>
 </body>
 </html>

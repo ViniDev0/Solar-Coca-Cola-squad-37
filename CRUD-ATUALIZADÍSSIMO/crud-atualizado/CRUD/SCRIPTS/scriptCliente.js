@@ -22,8 +22,8 @@ cancelButton.addEventListener('click', closeModal);
 fade.addEventListener('click', closeModal);
 
 // Função de acesso ao localStorage
-const getLocalStorage = () => JSON.parse(localStorage.getItem('db_cliente')) ?? [];
-const setLocalStorage = (dbCliente) => localStorage.setItem("db_cliente", JSON.stringify(dbCliente));
+const getLocalStorage = () => JSON.parse(localStorage.getItem('db_client')) ?? [];
+const setLocalStorage = (dbClient) => localStorage.setItem("db_client", JSON.stringify(dbClient));
 
 // CRUD: Função Create
 const createClient = (client) => {
@@ -52,7 +52,7 @@ const deleteClient = (index) => {
 // Interação do CRUD com o layout
 
 // Validando Campos
-const isValidFields = () => {
+const isvalidFields = () => {
     return document.getElementById('form').reportValidity();
 };
 
@@ -64,14 +64,14 @@ const clearFields = () => {
 
 // Salvando Informações
 const saveClient = () => {
-    if (isValidFields()) {
+    if (isvalidFields()) {
         const client = {
-            produto: document.getElementById('produto').value,
-            canal: document.getElementById('Canal').value,
-            regiao: document.getElementById('regiao').value,
-            tipoCliente: document.getElementById('nivel').value
+            nome: document.getElementById('nome').value,
+            celular: document.getElementById('contato').value,
+            endereco: document.getElementById('endereco').value,
+            nivel: document.getElementById('nivel').value
         };
-        const index = document.getElementById('produto').dataset.index;
+        const index = document.getElementById('nome').dataset.index;
         if (index === 'new') {
             createClient(client);
         } else {
@@ -86,16 +86,18 @@ document.getElementById('salvar').addEventListener('click', saveClient);
 
 // Atualizando a tabela no layout
 
+//alterei os buttons para imgs bia
+       
 const createRow = (client, index) => {
     const newRow = document.createElement('tr');
     newRow.innerHTML = `
-        <td>${client.produto}</td>
-        <td>${client.canal}</td>
-        <td>${client.regiao}</td>
-        <td>${client.tipoCliente}</td>
+        <td>${client.nome}</td>
+        <td>${client.celular}</td>
+        <td>${client.endereco}</td>
+        <td>${client.nivel}</td>
         <td>  
-            <img src="./imgs/icons8-lixeira.svg" class="exclude" data-action="delete-${index}">
-            <img src="./imgs/icons8-editar.svg" class="edit" data-action="edit-${index}">
+             <img src="../imgs/icons8-lixeira.svg"  class="exclude" data-action="delete-${index}">
+             <img src="../imgs/icons8-editar.svg" class="edit" data-action="edit-${index}">
         </td>
     `;
     document.querySelector('#tableClient>tbody').appendChild(newRow);
@@ -126,13 +128,13 @@ const EditClient = (index) => {
 };
 
 const preencherCampos = (client) => {
-    document.getElementById('produto').value = client.produto;
-    document.getElementById('Canal').value = client.canal;
-    document.getElementById('Região').value = client.regiao;
-    document.getElementById('TipoCliente').value = client.tipoCliente;
-    document.getElementById('produto').dataset.index = client.index;
+    document.getElementById('nome').value = client.nome;
+    document.getElementById('contato').value = client.celular;
+    document.getElementById('endereco').value = client.endereco;
+    document.getElementById('nivel').value = client.nivel;
+    document.getElementById('nome').dataset.index = client.index;
 };
-
+ 
 // editDelete FOI ALTERADO A LOGICA PARA OS ICONES FUNCIONAREM
 const editDelete = (event) => {
     const action = event.target.dataset.action; // Pegando o atributo data-action
@@ -146,6 +148,7 @@ const editDelete = (event) => {
         }
     }
 };
+
 
 document.querySelector('#tableClient>tbody').addEventListener('click', editDelete);
 
@@ -161,23 +164,22 @@ pesquisaInput.addEventListener('input', function() {
         const celulas = linhas[i].getElementsByTagName('td');  // Pega todas as células da linha
         let linhaVisivel = false;  // Define um indicador para mostrar ou ocultar a linha 
 
-        // Itera sobre todas as células da linha
-        for (let j = 0; j < celulas.length; j++) {
-            const textoCelula = celulas[j].textContent || celulas[j].innerText;  // Pega o texto da célula
-            if (textoCelula.toLowerCase().includes(termoDeBusca)) {
-                linhaVisivel = true;  // Se encontrar uma correspondência, torna a linha visível
-            }
-        }
-
-        // Exibe ou oculta a linha com base na pesquisa
-        if (linhaVisivel) {
-            linhas[i].style.display = '';  // Exibe a linha
-        } else {
-            linhas[i].style.display = 'none';  // Oculta a linha
-        }
+// Itera sobre todas as células da linha
+for (let j = 0; j < celulas.length; j++) {
+    const textoCelula = celulas[j].textContent || celulas[j].innerText;  // Pega o texto da célula
+    if (textoCelula.toLowerCase().includes(termoDeBusca)) {
+        linhaVisivel = true;  // Se encontrar uma correspondência, torna a linha visível
     }
-});
+}
 
+ // Exibe ou oculta a linha com base na pesquisa
+ if (linhaVisivel) {
+    linhas[i].style.display = '';  // Exibe a linha
+} else {
+    linhas[i].style.display = 'none';  // Oculta a linha
+}
+}
+});
 
 //botão para imprimir relatório
 const botaoImprimir = document.getElementById("button-imprimir");
@@ -281,3 +283,4 @@ estilo += "</style>";
   //da um print na tabela que acabamos de criar
   win.print();
 })
+

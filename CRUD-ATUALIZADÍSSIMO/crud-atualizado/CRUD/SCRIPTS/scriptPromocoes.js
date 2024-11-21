@@ -67,8 +67,7 @@ const saveClient = () => {
     if (isvalidFields()) {
         const client = {
             nome: document.getElementById('nome').value,
-            celular: document.getElementById('contato').value,
-            endereco: document.getElementById('endereco').value,
+            regiao: document.getElementById('regiao').value,
             nivel: document.getElementById('nivel').value
         };
         const index = document.getElementById('nome').dataset.index;
@@ -92,12 +91,11 @@ const createRow = (client, index) => {
     const newRow = document.createElement('tr');
     newRow.innerHTML = `
         <td>${client.nome}</td>
-        <td>${client.celular}</td>
-        <td>${client.endereco}</td>
+        <td>${client.regiao}</td>
         <td>${client.nivel}</td>
         <td>  
-             <img src="../CRUD/imgs/icons8-lixeira.svg"  class="exclude" data-action="delete-${index}">
-             <img src="../CRUD/imgs/icons8-editar.svg" class="edit" data-action="edit-${index}">
+             <img src="../imgs/icons8-lixeira.svg"  class="exclude" data-action="delete-${index}">
+             <img src="../imgs/icons8-editar.svg" class="edit" data-action="edit-${index}">
         </td>
     `;
     document.querySelector('#tableClient>tbody').appendChild(newRow);
@@ -129,8 +127,7 @@ const EditClient = (index) => {
 
 const preencherCampos = (client) => {
     document.getElementById('nome').value = client.nome;
-    document.getElementById('contato').value = client.celular;
-    document.getElementById('endereco').value = client.endereco;
+    document.getElementById('regiao').value = client.celular;
     document.getElementById('nivel').value = client.nivel;
     document.getElementById('nome').dataset.index = client.index;
 };
@@ -283,4 +280,3 @@ estilo += "</style>";
   //da um print na tabela que acabamos de criar
   win.print();
 })
-
