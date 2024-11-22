@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+  }
+.loginBox {
+    list-style-type: none;
+    display: grid;
+    gap: 60px;
+    align-items: center;
+    justify-items: center;
+  }
+  .loginField input {
+    border: 0.5px solid black;
+    border-radius: 15px;
+    width: 20rem;
+    height: 3rem;
+  }
+  .loginField label {
+    position: absolute;
+    bottom: 60px;
+  }
+  .loginField {
+    position: relative;
+  }
+  aside img {
+    width: 100%
+  }
+  aside h1 {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    font-size: 4rem;
+    color: white;
+  }
+  aside span {
+    color: #FFB803;
+    font-size: 5rem;
+  }
+  aside {
+    position: relative;
+  }
+  .loginField button {
+    color: white;
+    background: #FFB803;
+    border-radius: 50px;
+    width: 13rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    border: 0px;
+    transition: background-color 0.3s ease;
+  }
+  .loginField button:hover{
+    background: #e7a601;
+  
+  }
+  .loginField input::placeholder {
+    color: black;
+    font-size: 1rem;
+    padding: 15px;
+  }
+  form div {
+    text-align: center;
+    position: relative; /* Alterado de absolute para relative */
+    margin-top: 30px; /* Adiciona espaço acima do formulário */
+    font-size: 2rem;
+  }
+  .loginImage img {
+    max-width: 200px;
+  }
+  
+  form div h1, h2 {
+    margin: 0;
+  }
