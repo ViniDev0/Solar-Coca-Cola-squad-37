@@ -65,7 +65,7 @@ main{
 .sidebar button:hover{
     border-radius: 50px;
     background: #690101;
-    color: #ff0000;
+    color: #ffffff;
 }
 .sidebar .botao-fundo button:hover{
     border-radius: 50px;
@@ -136,7 +136,8 @@ main{
     background-color: #ffffff;
     color: black;
     margin-bottom: 20px;
-    padding-left: 10px;
+  
+    padding: 5px 5px 5px 10px;
 
 }
 /* estilos tabela  */
