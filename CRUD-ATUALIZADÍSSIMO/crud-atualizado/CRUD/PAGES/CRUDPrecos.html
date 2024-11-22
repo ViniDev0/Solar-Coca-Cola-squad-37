@@ -35,20 +35,16 @@
             </nav>
 
     </div>
-        <div id="cor">
-            <div class="nav-baixa">
-                <nav class="botao-fundo">
-                    <button>
-                        <span>SAIR</span>
-                    </button>
-                    <button>
-                        <span>
-                            <span>MEU PERFIL</span>
-                        </span>
-                    </button>
-                </nav>
-            </div>
+    <div id="cor">
+        <div class="nav-baixa">
+            <nav class="botao-fundo">
+                <button>
+                    <span>MEU PERFIL</span>
+                </button>
+                <button id="logoutButton" onclick="logout()">SAIR</button>
+            </nav>
         </div>
+    </div>
     </aside>
     <main>
         <div class="conteiner-tabela">
@@ -98,7 +94,7 @@
             </div>
             <div class="modal-body-preco">
                 <form id="form" class="modal-form-preco">
-                    <input type="text" id="produto" data-index="new" class="modal-field" placeholder="Produto"required>
+                    <input type="text" id="produto" data-index="new" class="modal-field" placeholder="Nome do Produto"required>
                     <select id="Canal" class="modal-field" required>
                         <option value="" disabled selected>Canal</option>
                         <option value="Vendedor">Vendedor</option>

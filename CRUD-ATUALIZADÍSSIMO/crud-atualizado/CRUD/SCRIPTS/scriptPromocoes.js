@@ -280,3 +280,9 @@ estilo += "</style>";
   //da um print na tabela que acabamos de criar
   win.print();
 })
+
+// Função de logout
+function logout() {
+    localStorage.removeItem("loggedIn");
+    
+    window.location.href = '../PAGES/PaginaLogin.html'; }

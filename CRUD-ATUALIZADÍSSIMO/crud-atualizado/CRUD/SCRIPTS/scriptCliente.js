@@ -284,3 +284,9 @@ estilo += "</style>";
   win.print();
 })
 
+// Função de logout
+function logout() {
+    localStorage.removeItem("loggedIn");
+    
+    window.location.href = '../PAGES/PaginaLogin.html';}
+

@@ -34,20 +34,16 @@
                 </button>
             </nav>
     </div>
-        <div id="cor">
-            <div class="nav-baixa">
-                <nav class="botao-fundo">
-                    <button>
-                        <span>SAIR</span>
-                    </button>
-                    <button>
-                        <span>
-                            <span>MEU PERFIL</span>
-                        </span>
-                    </button>
-                </nav>
-            </div>
+    <div id="cor">
+        <div class="nav-baixa">
+            <nav class="botao-fundo">
+                <button>
+                    <span>MEU PERFIL</span>
+                </button>
+                <button id="logoutButton" onclick="logout()">SAIR</button>
+            </nav>
         </div>
+    </div>
     </aside>
     <main>
         <div class="conteiner-tabela">
@@ -99,9 +95,9 @@
                 </div>
                 <div class="info-crud">
                     <form id="form" class="modal-form-produto">
-                        <input type="text" id="id" class="modal-field" placeholder="ID" required>
+                        <input type="text" id="id" class="modal-field" placeholder="ID do Produto" required>
                         <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome do Produto"required>
-                        <input type="text" id="descricao" class="modal-field" placeholder="Descrição" required>
+                        <input type="text" id="descricao" class="modal-field" placeholder="Descrição do Produto" required>
                         <select id="Categoria" class="modal-field" required>
                             <option value="" disabled selected>Categoria do Produto</option>
                             <option value="ouro">Refigerante</option>
