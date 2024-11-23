@@ -10,10 +10,9 @@
     background-image: url(../imgs/foto\ de\ fundo.png);
     align-content: center;
     background-size: cover; /* Faz a imagem cobrir toda a tela */
-    background-position: center; /* Centraliza a imagem */
+    background-position: right center;; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita que a imagem se repita */
     background-attachment: fixed; /* A imagem permanece fixa ao rolar a página */
-    
 
   }
 
@@ -101,3 +100,21 @@
     border: 1px solid rgb(189, 155, 17);
     justify-items: center;
 } */
+
+@media (max-width: 1101px) {
+    
+
+    
+     #areaLogin{
+        background-color: rgb(255, 255, 255);
+        width: 400px;
+        height: 400px;
+        justify-self: center;
+        border-radius: 20px;
+        justify-items: center;
+        margin-left: 600px;
+        margin-right: 80px;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    }  
+      
+}
