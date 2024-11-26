@@ -9,11 +9,11 @@
 <body>
     <div class="container">
       <aside class="sidebar">
-         <div>
+         <div class="elementos-cima">
             <header class="sidebar-header">
                 <div class="logo-elemento">
-                    <img class="logo-solar" src="../imgs/SOLAR-LOGO.png" alt="">
-                    <img class="line"  src="../imgs/Line 7.png" alt="">
+                    <img class="logo-solar" src="../imgs/SOLAR-LOGO.png" alt="Logo Solar">
+                    <img class="line" src="../imgs/Line 7.png" alt="Linha separadora">
                 </div>
             </header>
             <nav class="botao-cima">
@@ -33,17 +33,17 @@
                     <span>PREÇOS</span>
                 </button>
             </nav>
-    </div>
-    <div id="cor">
-        <div class="nav-baixa">
-            <nav class="botao-fundo">
-                <button>
-                    <span>MEU PERFIL</span>
-                </button>
-                <button id="logoutButton" onclick="logout()">SAIR</button>
-            </nav>
         </div>
-    </div>
+        <div id="cor">
+            <div class="nav-baixa">
+                <nav class="botao-fundo">
+                    <button>
+                        <span>MEU PERFIL</span>
+                    </button>
+                    <button id="logoutButton" onclick="logout()">SAIR</button>
+                </nav>
+            </div>
+        </div>
     </aside>
     <main>
         <div class="conteiner-tabela">
@@ -51,7 +51,7 @@
             <div class="conteinerBuscarClinte">
                 <h2>Buscar Produto</h2>
                  <div class="pesquisa">
-                    <input type="text" id="pesquisa" placeholder="Pesquisar..." button="">
+                    <input type="text" id="pesquisa" placeholder="Pesquisar...">
                 </div>
             </div>
          <div class="tabela-conteiner">
@@ -75,34 +75,42 @@
             </div>
     </div>
     <div class="botao-cabecalho">     
-        <button class="open-modal"> <img src="../imgs/adicionar.png" alt=""><span> Adicionar Produto </span></button>
+        <button class="open-modal">
+            <img src="../imgs/adicionar.png" alt="Adicionar Produto">
+            <span> Adicionar Produto </span>
+        </button>
     </div>
    
-    <button id="button-imprimir">imprimir</button>
+    <button id="button-imprimir">Imprimir</button>
         
         <!-- Modal -->
         <div id="fade" class="hide"></div>
         <div id="modal" class="hide">
             <div class="modal-header">
-                <img  id="logo-cliente" src="../imgs/Produto.png" alt="">
-                <button id="close-modal"> <img src="../imgs/excluir.png" alt=""></button>
+                <img id="logo-cliente" src="../imgs/Produto.png" alt="Logo Produto">
+                <button id="close-modal">
+                    <img src="../imgs/excluir.png" alt="Fechar">
+                </button>
             </div>
 
             <div class="modal-body">
                 <div id="BOTAO-IMG">
-                    <button><img class="muda-imagem" src="./imgs/botao-adicionar.png" alt=""></button>
+                    <!-- Adiciona botão para abrir upload de imagem -->
+                    <button type="button" onclick="document.getElementById('uploadImagem').click();">
+                        <img class="muda-imagem" src="../imgs/botao-adicionar.png" alt="Adicionar Imagem">
+                    </button>
                     <input type="file" id="uploadImagem" accept="image/*" style="display: none;">
                 </div>
                 <div class="info-crud">
                     <form id="form" class="modal-form-produto">
                         <input type="text" id="id" class="modal-field" placeholder="ID do Produto" required>
-                        <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome do Produto"required>
+                        <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome do Produto" required>
                         <input type="text" id="descricao" class="modal-field" placeholder="Descrição do Produto" required>
-                        <select id="Categoria" class="modal-field" required>
+                        <select id="categoria" class="modal-field" required>
                             <option value="" disabled selected>Categoria do Produto</option>
-                            <option value="ouro">Refigerante</option>
-                            <option value="prata">Suco</option>
-                            <option value="bronze">Chá</option>
+                            <option value="Refrigerante">Refrigerante</option>
+                            <option value="Suco">Suco</option>
+                            <option value="Chá">Chá</option>
                         </select>
                     </form>
                     <div class="modal-footer">

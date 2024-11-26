@@ -38,6 +38,9 @@ main{
     position: relative;
     z-index: 0;
 }
+.elementos-cima{
+    margin-left: 30px;
+}
 .sidebar-header{
     width: 100%;
 }
