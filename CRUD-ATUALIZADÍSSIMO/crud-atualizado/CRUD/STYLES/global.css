@@ -17,7 +17,7 @@ main{
     border-radius: 24px 0px 0px 20px;
     position: relative;
     left: -2.0vw;
-    z-index: 1;
+    z-index: 0;
 }
 
 /* estilos Aside */
@@ -30,13 +30,14 @@ main{
     display: flex;
     height: 100vh;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     background-color: #F21D1D;
     border: 0px;
     width: 17vw;
     position: relative;
-    z-index: 2;
+    z-index: 0;
+    /* border: 1px solid black; */
 }
 
 .sidebar-header{
@@ -87,14 +88,25 @@ main{
 
 }
 .logo-solar{
-    width: 180px;
-    padding-left: 12px;
+    width: 150px;
+    padding-left: 13px;
 }
+
+.elementos-cima{
+    display: grid;
+    justify-items: center;
+    margin-top: 30px;
+    margin-right: 27px;
+    /* border: 1px solid black; */
+}
+
 .botao-cima{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 5px;
+    margin-top: 22px;
     padding-top: 20px;
     padding-left: 10px;
 }
@@ -103,9 +115,12 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-right: 25px;
+    /* border: 1px solid black; */
 } 
 .botao-fundo button{
     margin-top: 10px;
+    /* border: 1px solid black; */
 }
 #cor{
     background: #690101;
@@ -129,6 +144,8 @@ main{
     display: grid;
     width: 60vw;
 }
+
+
 
 #pesquisa{
     border-radius: 15px;
