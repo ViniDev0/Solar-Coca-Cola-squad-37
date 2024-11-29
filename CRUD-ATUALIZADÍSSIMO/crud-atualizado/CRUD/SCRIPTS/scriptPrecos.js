@@ -22,7 +22,18 @@ cancelButton.addEventListener('click', closeModal);
 fade.addEventListener('click', closeModal);
 
 // Função de acesso ao localStorage
-const getLocalStorage = () => JSON.parse(localStorage.getItem('db_cliente')) ?? [];
+const getLocalStorage = () => {
+    const data = localStorage.getItem('db_cliente');
+    if (data) {
+        try {
+            return JSON.parse(data);
+        } catch (e) {
+            console.error("Erro ao fazer parse do localStorage:", e);
+            return []; // Retorna um array vazio caso o JSON seja inválido
+        }
+    }
+    return []; // Retorna um array vazio caso não exista dados no localStorage
+};
 const setLocalStorage = (dbCliente) => localStorage.setItem("db_cliente", JSON.stringify(dbCliente));
 
 // CRUD: Função Create
@@ -65,22 +76,23 @@ const clearFields = () => {
 // Salvando Informações
 const saveClient = () => {
     if (isValidFields()) {
-        const client = {
-            produto: document.getElementById('produto').value,
-            canal: document.getElementById('Canal').value,
-            regiao: document.getElementById('regiao').value,
-            tipoCliente: document.getElementById('nivel').value
-        };
-        const index = document.getElementById('produto').dataset.index;
-        if (index === 'new') {
-            createClient(client);
-        } else {
-            updateClient(index, client);
-        }
-        updateTable();
-        closeModal();
+      const client = {
+        produto: document.getElementById('produto').value,
+        canal: document.getElementById('Canal').value,
+        regiao: document.getElementById('regiao').value,
+        tipoCliente: document.getElementById('nivel').value
+      };
+      const index = document.getElementById('produto').dataset.index;
+      console.log('Cliente a ser salvo:', client);  // Log para depuração
+      if (index === 'new') {
+        createClient(client);
+      } else {
+        updateClient(index, client);
+      }
+      updateTable();
+      closeModal();
     }
-};
+  };
 
 document.getElementById('salvar').addEventListener('click', saveClient);
 
