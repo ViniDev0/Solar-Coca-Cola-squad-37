@@ -238,4 +238,4 @@ fade.addEventListener("click", () => {
 // Função de logout
 function logout() {
     localStorage.removeItem("loggedIn");
-    window.location.href = './Login.html'; }
+    window.location.href = './index.html'; }
