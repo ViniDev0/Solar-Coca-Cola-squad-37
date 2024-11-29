@@ -7,7 +7,7 @@
     display: grid;
     width: 100vw;
     height: 100vh;
-    background-image: url(../imgs/foto\ de\ fundo.png);
+    background-image: url(./CRUD-ATUALIZADÍSSIMO/crud-atualizado/CRUD/imgs/foto\ de\ fundo.png);
     align-content: center;
     background-size: cover; /* Faz a imagem cobrir toda a tela */
     background-position: right center;; /* Centraliza a imagem */
