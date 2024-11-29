@@ -48,14 +48,14 @@
 - Opcionalmente, um editor de código (VS Code, Sublime Text, etc.) para personalizar o código.
 
 **obs:** Se for utilizar o VsCode, recomendamos   instalação da extensão Live Server. Após isso abra o projeto pela extensão instalada.
-## PassoS para Visualização
+## Passos para Visualização
 
 **Baixe ou clone o repositório:
 
     https://github.com/Beatriz-Cristiny/Solar-Coca-Cola-squad-37.git
 
-**Acesse umas das pastas
+**Acesse umas das pastas;
 
-**Abra em seu navegador, ou pela extensão LiveServer
+**Abra em seu navegador ou pela extensão LiveServer.
 
 
