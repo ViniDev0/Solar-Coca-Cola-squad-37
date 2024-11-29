@@ -234,3 +234,8 @@ fade.addEventListener("click", () => {
     perfilModal.classList.add("hide");
     fade.classList.add("hide");
 });
+
+// Função de logout
+function logout() {
+    localStorage.removeItem("loggedIn");
+    window.location.href = '../PAGES/Login.html'; }
