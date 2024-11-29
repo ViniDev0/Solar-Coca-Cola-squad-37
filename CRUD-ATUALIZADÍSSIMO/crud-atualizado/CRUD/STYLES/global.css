@@ -396,6 +396,7 @@ tbody td{
 
 /* Estilo do perfil*/
 
+
 .perfil {
     position: fixed;
     top: 0;
@@ -436,6 +437,7 @@ tbody td{
     height: 30px;
     align-content: center;  
     margin-left: 40px;
+   
 }
 
 
