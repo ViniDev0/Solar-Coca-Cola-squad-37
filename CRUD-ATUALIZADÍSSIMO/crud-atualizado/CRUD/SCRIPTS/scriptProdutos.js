@@ -120,7 +120,7 @@ uploadInput.addEventListener("change", handleImageUpload);
 
 // Resetar imagem ao cancelar ou fechar o modal
 const resetImage = () => {
-    botaoImagem.src = "../imgs/botao-adicionar.png";
+    botaoImagem.src = "./imgs/botao-adicionar.png";
     localStorage.removeItem("imagemModal");
     uploadInput.value = ""; // Reseta o campo de upload
     isNewProduct = true; // Reseta a flag para o próximo produto
@@ -160,8 +160,8 @@ const createRow = (produto, index) => {
         <td>${produto.descricao}</td>
         <td>${produto.categoria}</td>
         <td>
-            <img src="../imgs/icons8-lixeira.svg" class="exclude" data-action="delete-${index}">
-            <img src="../imgs/icons8-editar.svg" class="edit" data-action="edit-${index}">
+            <img src="./imgs/icons8-lixeira.svg" class="exclude" data-action="delete-${index}">
+            <img src="./imgs/icons8-editar.svg" class="edit" data-action="edit-${index}">
         </td>
     `;
     document.querySelector("#tableClient>tbody").appendChild(newRow);
@@ -198,7 +198,7 @@ const preencherCampos = (produto) => {
     document.getElementById("nome").dataset.index = produto.index;
 
     // Carregar a imagem associada ao produto (se houver)
-    botaoImagem.src = produto.imagem || "../imgs/botao-adicionar.png";
+    botaoImagem.src = produto.imagem || "./imgs/botao-adicionar.png";
     isNewProduct = false; // Marcar que não é um novo produto
 };
 
@@ -238,4 +238,4 @@ fade.addEventListener("click", () => {
 // Função de logout
 function logout() {
     localStorage.removeItem("loggedIn");
-    window.location.href = '../PAGES/Login.html'; }
+    window.location.href = './Login.html'; }
