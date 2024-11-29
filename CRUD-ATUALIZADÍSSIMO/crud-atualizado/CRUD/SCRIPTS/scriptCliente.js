@@ -96,8 +96,8 @@ const createRow = (client, index) => {
         <td>${client.endereco}</td>
         <td>${client.nivel}</td>
         <td>  
-             <img src="../imgs/icons8-lixeira.svg"  class="exclude" data-action="delete-${index}">
-             <img src="../imgs/icons8-editar.svg" class="edit" data-action="edit-${index}">
+             <img src="./imgs/icons8-lixeira.svg"  class="exclude" data-action="delete-${index}">
+             <img src="./imgs/icons8-editar.svg" class="edit" data-action="edit-${index}">
         </td>
     `;
     document.querySelector('#tableClient>tbody').appendChild(newRow);
@@ -288,7 +288,7 @@ estilo += "</style>";
 function logout() {
     localStorage.removeItem("loggedIn");
     
-    window.location.href = '../PAGES/Login.html';}
+    window.location.href = './Login.html';}
 
 
 // Seletores
