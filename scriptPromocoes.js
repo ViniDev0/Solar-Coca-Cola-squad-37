@@ -94,8 +94,8 @@ const createRow = (client, index) => {
         <td>${client.regiao}</td>
         <td>${client.nivel}</td>
         <td>  
-             <img src="./imgs/icons8-lixeira.svg"  class="exclude" data-action="delete-${index}">
-             <img src="./imgs/icons8-editar.svg" class="edit" data-action="edit-${index}">
+             <img src="./CRUD-ATUALIZADÍSSIMO/crud-atualizado/CRUD/imgs/icons8-lixeira.svg"  class="exclude" data-action="delete-${index}">
+             <img src="./CRUD-ATUALIZADÍSSIMO/crud-atualizado/CRUD/imgs/icons8-editar.svg" class="edit" data-action="edit-${index}">
         </td>
     `;
     document.querySelector('#tableClient>tbody').appendChild(newRow);
